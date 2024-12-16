@@ -1,0 +1,201 @@
+# Paw-gtps-links
+Ini link real paw
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAW GTPS Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien background */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* Semi transparan */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            background: -webkit-linear-gradient(#ffffff, #00c6ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #00c6ff, 0 0 30px #00c6ff;
+            }
+            100% {
+                text-shadow: 0 0 20px #ffffff, 0 0 30px #00c6ff, 0 0 40px #00c6ff;
+            }
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #dcdcdc;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .link-card {
+            background: linear-gradient(45deg, #1e90ff, #00bfff);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: popup 0.5s ease-out;
+        }
+
+        .link-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-card h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .link-card p {
+            font-size: 1.1rem;
+            color: #f1f1f1;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Animasi kembang api */
+        .firework {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0;
+            border-radius: 50%;
+            opacity: 0;
+            animation: firework-animation 1s forwards;
+        }
+
+        @keyframes firework-animation {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(3) translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        .firework:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .firework:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .firework:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .firework:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PAW GTPS Links</h1>
+            <p>Temukan berbagai link penting di bawah</p>
+        </header>
+        
+        <div class="links">
+            <a href="https://wa.me/62852-3591-5922?text=Halo" target="_blank" class="link-card" onclick="showFireworks(event, this)">
+                <h2>PAW GTPS</h2>
+                <p>Link menuju PAW GTPS</p>
+            </a>
+            <a href="https://chat.whatsapp.com/KzAtadorzfhKTjSKlFspBJ" target="_blank" class="link-card" onclick="showFireworks(event, this)">
+                <h2>Grup WhatsApp</h2>
+                <p>Bergabung dengan grup WhatsApp kami</p>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 PAW GTPS. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showFireworks(event, link) {
+            // Cegah default behavior dari klik
+            event.preventDefault();
+
+            // Tambahkan animasi warna biru gelap saat klik
+            link.style.backgroundColor = "#003366";
+
+            // Membuat efek kembang api
+            for (let i = 0; i < 5; i++) {
+                const fireworks = document.createElement("div");
+                fireworks.classList.add("firework");
+                link.appendChild(fireworks);
+            }
+
+            // Menunda eksekusi link setelah animasi selesai
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 1000); // Sesuaikan dengan durasi animasi kembang api
+        }
+    </script>
+</body>
+</html>
